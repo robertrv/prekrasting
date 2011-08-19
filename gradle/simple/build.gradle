@@ -1,3 +1,4 @@
+apply plugin: "java"
 task loadfile << {
     def files = file('../antLoadfileResources').listFiles().sort()
     files.each { File file ->

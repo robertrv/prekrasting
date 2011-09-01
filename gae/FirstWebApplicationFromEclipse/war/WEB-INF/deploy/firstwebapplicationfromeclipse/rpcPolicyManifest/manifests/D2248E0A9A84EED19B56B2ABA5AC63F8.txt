@@ -1,0 +1,2 @@
+serviceClass: org.home.google.gae.client.GreetingService
+path: A4576756FD917E73362F12D51DB5DD16.gwt.rpc

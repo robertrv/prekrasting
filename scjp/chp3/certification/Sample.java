@@ -2,8 +2,6 @@ package certification;
 
 public class Sample {
 	
-	
-	
 	public static void main(String[] args) {
 		byte bb = (byte)2700;
 		System.out.println(bb);
@@ -11,6 +9,8 @@ public class Sample {
 		short s = (short)f;
 		byte a  = 3;
 		byte b = 8;
+		int[][] a2 = {{1}};
+		int[] a3 = (int[])a2[0];
 		byte c = (byte) (a + b);
 		s = (byte) 128;
 		System.out.println("s: " + s);

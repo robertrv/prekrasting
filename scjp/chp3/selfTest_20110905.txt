@@ -1,0 +1,22 @@
+1.- c
+2.- b
+3.- f [c]
+4.- F
+5.- F (due the first final) [A]
+6.- D ? r1 r4 pre  b1 b2 r3 r2 hawk
+7.- D (in fact doesn't compiles at line (13 for sure)) 
+8.- C
+9.- B. 232
+10.- C, F (E if we consider dz not as an object just a member)
+11.- B (a1)
+12.- B 5 4
+13.- E (line 10, variable not initialized ?) [a]
+
+ERRORS
+2.- C 
+3.- C
+5.- A
+7.- A, B
+8.- E
+9- A
+12.- A

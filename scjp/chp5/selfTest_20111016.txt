@@ -17,3 +17,7 @@ answers
 16. c, d
 
 Incorrect:
+4. c,d,e
+7. c
+9. d,f 
+14. e

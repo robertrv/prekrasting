@@ -6,6 +6,7 @@ public class Samples {
 		GameShape gs = p;
 		Animatable a = p;
 		gs.display();
+		PlayerPiece pp = (PlayerPiece)new GameShape();
 	}
 }
 

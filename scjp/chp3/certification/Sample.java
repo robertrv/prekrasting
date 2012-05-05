@@ -9,6 +9,7 @@ public class Sample {
 		short s = (short)f;
 		byte a  = 3;
 		byte b = 8;
+		int[][] a44 = new int[4][5];
 		int[][] a2 = {{1}};
 		int[] a3 = (int[])a2[0];
 		byte c = (byte) (a + b);
@@ -30,6 +31,8 @@ public class Sample {
 		ss.doStuff(Long.valueOf("2"));
 		byte b2 = 5;
 		ss.doStuff(b2);
+		int[] aa={1,2,3};
+		ss.testAnArray(aa);
 	}
 	
 	public void doStuff(Long param) {
@@ -37,5 +40,8 @@ public class Sample {
 	}
 	public void doStuff(double param) {
 		System.out.println("second: " + param);
+	}
+	public void testAnArray(int[] some) {
+		
 	}
 }

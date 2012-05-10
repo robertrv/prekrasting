@@ -1,0 +1,14 @@
+1. c
+2. b, d
+3. a, e
+4. a
+5. d
+6. a
+7. c(not sure),d,e
+8. d (public?) o B
+9. d
+
+ERRORS
+5. d and E (forgotten to check :()
+7. c, d, f (arrays cannot be defined within a method). Not e: Boolean []a[]; Is correct!
+8. B. (D is correct)

@@ -7,9 +7,7 @@ public class Samples {
 		GameShape gs = p;
 		Animatable a = p;
 		gs.display();
-<<<<<<< HEAD
 		PlayerPiece pp = (PlayerPiece)new GameShape();
-=======
 		int aa = new Character('9');
 		System.out.println("this is the char: "+ aa);
 		test(4l);
@@ -17,7 +15,6 @@ public class Samples {
 	
 	public static void test(Long... x){
 		System.out.println(x[0]);
->>>>>>> changes to add small samples to use inside eclipse
 	}
 }
 
@@ -33,6 +30,7 @@ interface Animatable {
 }
 
 class PlayerPiece extends GameShape implements Animatable {
+	@Override
 	public void display() {
 		System.out.println("PlayerPiece.display");
 	}

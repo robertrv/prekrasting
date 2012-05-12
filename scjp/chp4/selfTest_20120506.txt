@@ -1,0 +1,23 @@
+1.D
+2.E 
+	F1. no compila
+	F2. solo compila
+	F3. compila da true
+	F4. compila da true
+	F5. solo compila (posiblemente no compile :S)
+3. E (accede a la posición 1 de args)
+4. G
+5. 
+	x *= x // 49
+	y *= y // 4
+	y *= y // 16
+	x -= y // 49 - 16 = 33
+6. C
+7. A
+8. C, 
+9. C, G
+10. D
+
+ERRORS:
+2.D (not seen comma !)
+9. C, F (just get messed with ors ... too fast!)

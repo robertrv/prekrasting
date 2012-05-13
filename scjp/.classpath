@@ -5,6 +5,7 @@
 	<classpathentry kind="src" path="chp3"/>
 	<classpathentry kind="src" path="chp4"/>
 	<classpathentry kind="src" path="chp5"/>
+	<classpathentry kind="src" path="chp6"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,0 +1,44 @@
+1.B (or A, depends if matcher.start is 0 o 1 based)
+2. C
+3. G ? (don't really know)
+4. A
+5.
+	import java.io.File; 	
+	try {
+		File dir = new File("dir3");
+		dir.mkdir();
+		File file = new File(dir, "file3");
+		file.createNewFile();
+	} catch (Exception x) {
+	}
+6.
+	import java.date.*:
+	import java.util.*;
+	DateFormat df = DateFormat.getInstance(Locale.GERMANY, DateFormat.LONG);
+	System.out.println(df.format(d));
+	
+7. A,B
+8. E,F
+9. D,F
+10.C (maybe E due the br.flush)
+11. D (pw should be char[])
+12. A, B
+13. A (don't know)
+14. B
+15. F
+
+ERRORS
+1.E
+3. B,C,D
+6. 
+import java.util.*; 
+import java.text.*; 
+class DateTwo {
+	public static void main(String[] args) { Date d = new Date(1119280000000L);
+		DateFormat df = DateFormat.getDateInstance( DateFormat.LONG, Locale.GERMANY);
+		System.out.println(df.format(d));
+	}
+}
+8. C, F ... transient is initialized with default value !
+10. E
+13. D,f,g

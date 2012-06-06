@@ -1,0 +1,16 @@
+1.B,D
+2.BD
+3.E
+4.BD
+5.AEG (think about D,E,F ...)
+6.B,D (I think Sheep cannot be the parametrizer)
+7.D,C
+8.A,B,E,F
+9.B
+10.A,B,C,D,F
+11.
+12.
+13.
+14.
+15.
+16.

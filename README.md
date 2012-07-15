@@ -6,3 +6,5 @@ Explanation by folder:
  * scjp: Small mini tests during my SCJP learning process
  * gae: Some tests with Google App Engine, to see how it works :D
  * mvn: Can you guess ? Stuff related to maven testing !!
+ * python: small scripts useful for different tasks.
+ * katas: place to save some kata's code.

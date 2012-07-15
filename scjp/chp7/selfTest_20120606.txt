@@ -1,16 +1,29 @@
-1.B,D
+1.B,C
 2.BD
 3.E
 4.BD
-5.AEG (think about D,E,F ...)
+5.BEG (think about D,E,F ...)
 6.B,D (I think Sheep cannot be the parametrizer)
 7.D,C
 8.A,B,E,F
 9.B
 10.A,B,C,D,F
-11.
-12.
-13.
-14.
-15.
-16.
+11.E (hash code cannot be a float),D
+12.B,F
+13.B,C.Lot of doubts: can be done ceilingKey?
+14.B
+15.D
+16.G
+
+
+ERRORS
+
+1. B (C=> in List<List<Interger>> aa = new ArrayList<ArrayList<Integer>>(); is not valid because the parametrized type has t be the same, not the main class, remember that finally will be erased on runtime).
+4. CD (If hashcode is not defined, every objects goes to its bucket, so 3 objects without hashcode always will be on three diff buckets => size = 3)
+6. B. (D breacks because munch(Sheep) does not fulfills the contract of Carnivore)
+7. C (List is an interface)
+8. BEF (A: Return type is not declared as ArrayList, is List, you cannot assign to a subclass directly, can be another class)
+11. A,D. (A ... hashCode is not properly implemented but automatically converting from double to int)
+13. A.
+15.G
+16. D,G (D is not extrictly true ...)

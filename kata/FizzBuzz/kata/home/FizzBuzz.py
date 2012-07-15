@@ -17,10 +17,11 @@ class FizzBuzz(object):
     
     def __next(self, i):
         result = ""
-        if (i % 3 == 0):
+        if (i % 3 == 0) or ('3' in str(i)):
             result = ''.join([result,FIZZ])
+            
         
-        if (i % 5 == 0):
+        if (i % 5 == 0) or ('5' in str(i)):
             result = ''.join([result,BUZZ])
         if not result:
             return i

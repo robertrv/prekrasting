@@ -22,6 +22,7 @@ class Bowling {
 		this.score = score
 		index = 0
 		total = 0
+		
 	}
 
 	int calculate() {

@@ -7,30 +7,15 @@ package org.home.kata
  * 
  * @author robertrv
  */
-class Bowling {
-	
-	enum TYPE {STRIKE, SPARE, MISS, NUMBER 
-		int numericalValue(char value) {
-			if (this == MISS) {
-				return 0
-			} else if (this == NUMBER) {
-				return Integer.parseInt(value.toString())
-			} else if (this == STRIKE) {
-				return 10
-			} else {
-				throw new IllegalStateException("Numberical value for a type which does not need it: " 
-					+ this)
-			}
-		}
-	}
+class BowlingFirst {
 
 	final String score
 	private int index
 	private int total
-	private TYPE lastFrameType
+	private Type lastFrameType
 	private boolean prePreStrike
 
-	Bowling(String score) {
+	BowlingFirst(String score) {
 		if (score == null) {
 			throw new IllegalArgumentException()
 		}
@@ -55,13 +40,13 @@ class Bowling {
 		int firstShotValue = 0
 		int secondShotValue = 0
 		
-		TYPE firstShotType = currentTryType()
+		Type firstShotType = currentTryType()
 		switch (firstShotType) {
-			case [TYPE.NUMBER,TYPE.MISS]:
+			case [Type.NUMBER,Type.MISS]:
 				firstShotValue = firstShotType.numericalValue(currentChar())
 				index++
-				TYPE secondShotType = currentTryType()
-				if (secondShotType == TYPE.SPARE) {
+				Type secondShotType = currentTryType()
+				if (secondShotType == Type.SPARE) {
 					secondShotValue = 10 - firstShotValue
 				} else {
 					// Should be numerical: miss or number, cannot be an STRIKE
@@ -71,7 +56,7 @@ class Bowling {
 				this.lastFrameType = secondShotType
 				break
 	
-			case TYPE.STRIKE:
+			case Type.STRIKE:
 				firstShotValue = 10
 				sumBonus(firstShotValue, secondShotValue)
 				this.lastFrameType = firstShotType
@@ -100,11 +85,11 @@ class Bowling {
 	 * not "bonused" all
 	 */
 	private void sumBonus(int firstTryValue, int secondTryValue) {
-		TYPE currentType = currentTryType()
+		Type currentType = currentTryType()
 		
-		if (lastFrameType == TYPE.SPARE) {
+		if (lastFrameType == Type.SPARE) {
 			total += firstTryValue
-		} else if (lastFrameType == TYPE.STRIKE) {
+		} else if (lastFrameType == Type.STRIKE) {
 			total += (firstTryValue + secondTryValue)
 		}
 		
@@ -112,16 +97,16 @@ class Bowling {
 			total += firstTryValue
 		}
 		
-		prePreStrike = lastFrameType == TYPE.STRIKE && currentType == TYPE.STRIKE
+		prePreStrike = lastFrameType == Type.STRIKE && currentType == Type.STRIKE
 		
 	}
 		
 	private boolean isLastFrameBonus() {
 		boolean isLast = false
 		
-		if (lastFrameType == TYPE.SPARE) {
+		if (lastFrameType == Type.SPARE) {
 			isLast = this.score.length() == index + 1
-		} else if (lastFrameType == TYPE.STRIKE) {
+		} else if (lastFrameType == Type.STRIKE) {
 			isLast = this.score.length() == index + 2
 		}
 		return isLast;
@@ -135,15 +120,15 @@ class Bowling {
 	private void sumLastFrameBonus() {
 
 		// "Normal" treatment for the first shot
-		TYPE last = currentTryType()
+		Type last = currentTryType()
 		// can be just: NUMBER, MISS or STRIKE (not spare!)
 		int first = last.numericalValue(currentChar())
 		sumBonus(first, 0)
 		
-		if (lastFrameType == TYPE.STRIKE) {
+		if (lastFrameType == Type.STRIKE) {
 			index ++ 
 			last = currentTryType()
-			if (last == TYPE.SPARE) {
+			if (last == Type.SPARE) {
 				total += (10 - first)
 			} else {
 				total += last.numericalValue(currentChar())
@@ -153,16 +138,16 @@ class Bowling {
 
 	}
 
-	TYPE currentTryType() {
+	Type currentTryType() {
 		char current = currentChar()
 		if ('/' == current) {
-			return TYPE.SPARE
+			return Type.SPARE
 		} else if ('X' == current) {
-			return TYPE.STRIKE
+			return Type.STRIKE
 		} else if ('-' == current) {
-			return TYPE.MISS
+			return Type.MISS
 		} else {
-			return TYPE.NUMBER
+			return Type.NUMBER
 		}
 	}
 		

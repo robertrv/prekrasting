@@ -16,12 +16,12 @@ import org.junit.runners.Parameterized.Parameters
 @RunWith(Parameterized)
 class BowlingTest {
 
-	Bowling iut
 	def expectedResult
+	def score
 
 	BowlingTest(String score, int result) {
 		this.expectedResult = result
-		this.iut = new Bowling(score)
+		this.score = score
 	}
 
 	@Parameters
@@ -45,7 +45,16 @@ class BowlingTest {
 	}
 
 	@Test
-	void calculate() {
+	void calculateFirst() {
+		BowlingFirst iut = new BowlingFirst(score)
+		def actualResult = iut.calculate()
+		println "rolls: ${iut.score}, expected amount in points: ${expectedResult}, actual: ${actualResult}"
+		assertEquals("rolls: ${iut.score}", expectedResult, actualResult)
+	}
+
+	@Test
+	void calculateRefactored() {
+		BowlingParsing iut = BowlingParsing(score)
 		def actualResult = iut.calculate()
 		println "rolls: ${iut.score}, expected amount in points: ${expectedResult}, actual: ${actualResult}"
 		assertEquals("rolls: ${iut.score}", expectedResult, actualResult)

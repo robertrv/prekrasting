@@ -11,16 +11,32 @@ public enum Type {
 		} else if (this == STRIKE) {
 			return 10
 		} else {
-			throw new IllegalStateException("Numberical value for a type which does not need it: "
+			throw new IllegalStateException("Numberical value for a type which does not have it: "
 				+ this)
 		}
+	}
+	
+	int bonusToApply() {
+		int bonus = 0
+		
+		if (this == STRIKE) {
+			bonus = 2
+		} else if (this == SPARE) {
+			bonus = 1
+		}
+		
+		return bonus
 	}
 	
 	boolean canGetNumerical() {
 		return this != SPARE
 	}
 	
-	private static Type parse(char value) {
+	boolean needASecondShot() {
+		return this != Type.STRIKE
+	}
+	
+	static Type parse(char value) {
 		if ('/' == value) {
 			return Type.SPARE
 		} else if ('X' == value) {
@@ -30,7 +46,6 @@ public enum Type {
 		} else {
 			return Type.NUMBER
 		}
-
 	}
 
 }

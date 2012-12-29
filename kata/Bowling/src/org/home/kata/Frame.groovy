@@ -6,9 +6,22 @@ class Frame {
 	private int bonus
 	private Type type
 
-	public Frame(char firstShot) {
-		type = Type.parse(firstShot)
+	Frame(char firstShot) {
+		setType(firstShot)
 		this.firstShot = type.numericalValue(firstShot)
+	}
+	
+	Frame(char current, Character secondChar) {
+		this(current)
+		if (secondChar != null) {
+			setType(secondChar)
+			addSecondShot(secondChar)
+		}
+	}
+
+	private void setType(char c) {
+		type = Type.parse(c)
+		bonus = 0
 	}
 	
 	public int calculateTotal() {
@@ -16,18 +29,39 @@ class Frame {
 	}
 	
 	public int parse(String input, int index) {
-		if (needASecondShot()) {
-			index ++;
+		if (type.needASecondShot()) {
+			char second = input.charAt(index)
+			setType(second)
+			
+			addSecondShot(second)
+			return index+1;
 		}
 		return index;
 	}
-
-	private boolean needASecondShot() {
-		return type != Type.STRIKE
+	
+	void addBonus(int bonus){
+		this.bonus += bonus;
+	}
+	
+	int getFirstShot() {
+		return firstShot
+	}
+	
+	int numberBonusDeserved() {
+		int bonus = 0
+		if (type == Type.SPARE) {
+			bonus = 1
+		} else if (type == Type.STRIKE) {
+			bonus = 2
+		}
+		return bonus
+	}
+	
+	Type getType() {
+		return type
 	}
 	
 	private void addSecondShot(char second) {
-		Type type = Type.parse(second)
 		if (type == Type.SPARE) {
 			secondShot = 10 - firstShot
 		} else {
@@ -35,4 +69,17 @@ class Frame {
 		}
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("[type:").append(type)
+		sb.append(",first:").append(firstShot)
+		if (type.needASecondShot()) {
+			sb.append(",second:").append(secondShot)
+		}
+		sb.append(", total: ").append(calculateTotal())
+		
+		sb.append("]")
+		return sb.toString();
+	}
 }

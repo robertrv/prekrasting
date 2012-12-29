@@ -54,7 +54,7 @@ class BowlingTest {
 
 	@Test
 	void calculateRefactored() {
-		BowlingParsing iut = BowlingParsing(score)
+		BowlingParsing iut = new BowlingParsing(score)
 		def actualResult = iut.calculate()
 		println "rolls: ${iut.score}, expected amount in points: ${expectedResult}, actual: ${actualResult}"
 		assertEquals("rolls: ${iut.score}", expectedResult, actualResult)

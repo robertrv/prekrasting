@@ -31,39 +31,35 @@ public class MasterMindExecutorTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-            new String[]{"YNYI", "X*", "RANI"},
-            new String[]{"RMVI", "XX", "RANI"},
-            new String[]{"RRVN", "X**", "NRRI"},
-            new String[]{"RMMM", "XXXX", "RMMM"},
-            new String[]{"RMMM", "X", "RNNN"},
-            new String[]{"RRRM", "X", "MMMM"},
-            new String[]{"RMRM", "XX", "MMMM"},
-            new String[]{"AAAA", "", "MMMM"},
+                new String[]{"YNYI", "X*", "RANI"},
+                new String[]{"RMVI", "XX", "RANI"},
+                new String[]{"RRVN", "X**", "NRRI"},
+                new String[]{"RMMM", "XXXX", "RMMM"},
+                new String[]{"RMMM", "X", "RNNN"},
+                new String[]{"RRRM", "X", "MMMM"},
+                new String[]{"RMRM", "XX", "MMMM"},
+                new String[]{"AAAA", "", "MMMM"},
 
-            new String[]{"RAAA", "*", "MMMR"},
-            new String[]{"RAMV", "**", "MVNM"},
-            new String[]{"RAMV", "***", "VRAN"},
-            new String[]{"RAMV", "****", "VRAM"},
+                new String[]{"RAAA", "*", "MMMR"},
+                new String[]{"RAMV", "**", "MVNM"},
+                new String[]{"RAMV", "***", "VRAN"},
+                new String[]{"RAMV", "****", "VRAM"},
 
-            new String[]{"RMMM", "XX", "RMNN"},
-            new String[]{"RMMM", "XXX", "RMNM"},
-            new String[]{"RAVM", "XX**", "RAMV"},
-            new String[]{"RAVM", "XX*", "RAMA"},
-            new String[]{"RMVM", "X*", "RAMA"},
+                new String[]{"RMMM", "XX", "RMNN"},
+                new String[]{"RMMM", "XXX", "RMNM"},
+                new String[]{"RAVM", "XX**", "RAMV"},
+                new String[]{"RAVM", "XX*", "RAMA"},
+                new String[]{"RMVM", "X*", "RAMA"},
 
         });
-
     }
-
 
     @Test
     public void testCheckCode() throws Exception {
-
         MasterMindExecutor executor = new MasterMindExecutor(solution);
 
-        assertEquals("Testing "+this,result, executor.checkCode(currentTry));
+        assertEquals("Testing " + this, result, executor.checkCode(currentTry));
     }
-
 
 
     @Override

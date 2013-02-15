@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="a71f7514-c47a-4d8a-9ba8-aded7e038ba1" name="Default" comment="" />
-    <list default="true" id="b8a23b8a-edb0-47cb-8329-efc8dfaea3b3" name="trying intellij github integration" comment="a first test to get intellij with github">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a71f7514-c47a-4d8a-9ba8-aded7e038ba1" name="Default" comment="" />
     <ignored path="HelloWorld.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="a71f7514-c47a-4d8a-9ba8-aded7e038ba1" time="1359907318942" ignored="false" />
@@ -72,52 +69,7 @@
     <favorites_list name="MasterMind" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5076616">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="MasterMindExecutor.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/org/home/kata/MasterMindExecutor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="10" selection-start="414" selection-end="414" vertical-scroll-proportion="0.54140127">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="MasterMindExecutorTest.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/home/kata/MasterMindExecutorTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="73" column="0" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="48" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".ignore" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.ignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="7" selection-start="72" selection-end="72" vertical-scroll-proportion="0.24793388">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -186,16 +138,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="MasterMind" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterMind" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterMind" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -395,7 +337,6 @@
       <updated>1359927285061</updated>
     </task>
     <task id="LOCAL-00002" summary="trying intellij github integration">
-      <changelist id="b8a23b8a-edb0-47cb-8329-efc8dfaea3b3" name="trying intellij github integration" comment="a first test to get intellij wihting " />
       <created>1359927563481</created>
       <updated>1359927563481</updated>
     </task>
@@ -592,30 +533,30 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/home/kata/MasterMindExecutor.java">
+    <entry file="file://$PROJECT_DIR$/.ignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="414" selection-end="414" vertical-scroll-proportion="0.54140127">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/home/kata/MasterMindExecutorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.0">
+        <state line="7" column="62" selection-start="64" selection-end="64" vertical-scroll-proportion="0.21694215">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="48" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.0">
+        <state line="11" column="48" selection-start="951" selection-end="951" vertical-scroll-proportion="0.031847134">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.ignore">
+    <entry file="file://$PROJECT_DIR$/src/org/home/kata/MasterMindExecutorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="72" selection-end="72" vertical-scroll-proportion="0.24793388">
+        <state line="73" column="0" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.8089172">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/home/kata/MasterMindExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="10" selection-start="414" selection-end="414" vertical-scroll-proportion="0.5268595">
           <folding />
         </state>
       </provider>

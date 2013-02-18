@@ -8,7 +8,7 @@
     <file path="/KarateChopTest.java" changelist="8df7261e-dcbf-461c-af6c-3d9473ea6e18" time="1361217648290" ignored="false" />
     <file path="/fragment.java" changelist="8df7261e-dcbf-461c-af6c-3d9473ea6e18" time="1360958884416" ignored="false" />
     <file path="/KarataChop.java" changelist="8df7261e-dcbf-461c-af6c-3d9473ea6e18" time="1360958659067" ignored="false" />
-    <file path="/readme.txt" changelist="8df7261e-dcbf-461c-af6c-3d9473ea6e18" time="1361017389490" ignored="false" />
+    <file path="/readme.txt" changelist="8df7261e-dcbf-461c-af6c-3d9473ea6e18" time="1361218207367" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +76,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KarateChopTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="KarateChopTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/org/home/kata/KarateChopTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="26" selection-start="563" selection-end="563" vertical-scroll-proportion="0.9269663">
+            <state line="22" column="26" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="290" selection-end="290" vertical-scroll-proportion="0.2949438">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,8 +113,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/org/home/kata/KarataChop.java" />
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/test/org/home/kata/KarateChopTest.java" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -394,7 +403,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="924" width="1551" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4953765" sideWeight="0.4923588" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -408,7 +417,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983388" sideWeight="0.21796565" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24983388" sideWeight="0.50462353" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24983388" sideWeight="0.50462353" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.55415285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -508,11 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="160" selection-end="160" vertical-scroll-proportion="0.12448133" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/home/kata/KarataChop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="32" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
@@ -522,10 +526,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/org/home/kata/KarateChopTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="26" selection-start="563" selection-end="563" vertical-scroll-proportion="0.9269663">
+        <state line="22" column="26" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="290" selection-end="290" vertical-scroll-proportion="0.2949438">
+          <folding />
         </state>
       </provider>
     </entry>

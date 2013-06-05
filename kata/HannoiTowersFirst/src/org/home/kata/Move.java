@@ -5,7 +5,7 @@ package org.home.kata;
  */
 public class Move {
 
-	enum Column {
+	public enum Column {
 		SOURCE, MIDDLE, TARGET;
 	}
 

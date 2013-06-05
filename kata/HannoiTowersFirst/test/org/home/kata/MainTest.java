@@ -1,46 +1,38 @@
 package org.home.kata;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.experimental.theories.DataPoints;
+import org.junit.experimental.theories.Theories;
+import org.junit.experimental.theories.Theory;
+import org.junit.runner.RunWith;
 
+@RunWith(Theories.class)
 public class MainTest {
-	
-	private MainIterate cut;
+
+	private static final Logger logger = Logger.getLogger(MainTest.class
+			.getName());
+
+	private MainIterativeSolution cut;
 
 	@Before
 	public void init() {
-		cut = new MainIterate();
+		cut = new MainIterativeSolution();
 	}
 
-	@Test
-	public void empty() {
-		List<Move> result = cut.calculateOrder(0);
-		assertTrue(result.isEmpty());
-	}
-	
-	@Test
-	public void three() {
-		List<Move> result = cut.calculateOrder(3);
+	public static @DataPoints
+	int[] candidates = { 3, 6 };
+
+	@Theory
+	public void run(int n) {
+		logger.info("---------> Going to start, with N= "+ n);
+		List<Move> result = cut.calculateOrder(n);
 		printResult(result);
-		assert(cut.hasFinished());
-	}
-	
-	@Test
-	public void twentyThree() {
-		List<Move> result = cut.calculateOrder(23);
-		printResult(result);
-		assert(cut.hasFinished());
-	}
-	
-	@Test
-	public void hundredTwentyThree() {
-		List<Move> result = cut.calculateOrder(123);
-		printResult(result);
-		assert(cut.hasFinished());
+		assertTrue(cut.hasFinished());
 	}
 
 	private void printResult(List<Move> result) {

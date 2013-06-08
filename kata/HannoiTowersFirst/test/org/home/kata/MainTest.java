@@ -25,7 +25,7 @@ public class MainTest {
 	}
 
 	public static @DataPoints
-	int[] candidates = { 3, 6 };
+	int[] candidates = {  1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 	@Theory
 	public void run(int n) {

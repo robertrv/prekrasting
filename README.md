@@ -8,3 +8,4 @@ Explanation by folder:
  * mvn: Can you guess ? Stuff related to maven testing !!
  * python: small scripts useful for different tasks.
  * katas: place to save some kata's code.
+ * etc: interesting configuration files

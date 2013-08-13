@@ -1,12 +1,15 @@
 package org.home.kata;
 
+import org.home.kata.Move.Column;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import org.home.kata.Move.Column;
 
 /**
  * Implementation of @see http://www.solveet.com/exercises/Torres-de-Hannoi/72
@@ -28,14 +31,30 @@ public class MainIterativeSolution {
 	private DiskStack middle;
 	private DiskStack target;
 	List<Move> movements = new ArrayList<Move>();
+    private boolean saveMovements = true;
 
 	public MainIterativeSolution() {
 		source = new DiskStack(Column.SOURCE);
 		middle = new DiskStack(Column.MIDDLE);
 		target = new DiskStack(Column.TARGET);
+        loadConfiguration();
 	}
 
-	public List<Move> calculateOrder(int n) {
+    private void loadConfiguration() {
+        try {
+            Properties prop = new Properties();
+            InputStream in = getClass().getResourceAsStream("hanoi.properties");
+            if (in != null) {
+                prop.load(in);
+                in.close();
+                saveMovements = Boolean.valueOf(prop.getProperty("saveMovements", "true"));
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Move> calculateOrder(int n) {
 		logger.log(Level.INFO, "Starting. ");
 		if (n <= 0) {
 			return Collections.emptyList();
@@ -162,7 +181,9 @@ public class MainIterativeSolution {
 		logger.log(Level.INFO, "Movement: {0}. new State: {1}", new Object[] {
 				move, this });
 		assertValidState();
-		movements.add(move);
+        if (saveMovements) {
+            movements.add(move);
+        }
 	}
 
 	public boolean hasFinished() {
@@ -179,7 +200,7 @@ public class MainIterativeSolution {
 		}
 	}
 
-	private void initSource(int n) {
+	protected void initSource(int n) {
 		for (int i = n; i >= 0; i--) {
 			source.push(i);
 		}

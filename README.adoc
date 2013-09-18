@@ -1,5 +1,3 @@
-= Prekrasting project
-
 == Explanation
 
 

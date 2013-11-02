@@ -2,20 +2,17 @@ package org.kata;
 
 import junit.framework.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
+ * A simple kata
  * User: rramirez
  * Date: 10/24/13
  * Time: 7:35 PM
- * To change this template use File | Settings | File Templates.
+ * Just a simple unfinished kata
  */
 public class HumanTowersTest {
     HumanTowers towers;
@@ -26,7 +23,7 @@ public class HumanTowersTest {
 
     @Test
     public void empty(){
-        int level = towers.level(Collections.EMPTY_LIST);
+        int level = towers.level(Collections.<Person>emptyList());
         Assert.assertEquals(0, level);
     }
 

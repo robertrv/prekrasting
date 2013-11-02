@@ -1,17 +1,9 @@
 package org.kata;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: rramirez
- * Date: 10/24/13
- * Time: 7:28 PM
- * To change this template use File | Settings | File Templates.
- */
 public class HumanTowers {
     public int level(List<Person> persons) {
         System.out.println("Going with: " + persons);

@@ -1,12 +1,5 @@
 package org.kata;
 
-/**
- * Created with IntelliJ IDEA.
- * User: rramirez
- * Date: 10/24/13
- * Time: 7:44 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Person {
 
     private int height;
@@ -17,27 +10,13 @@ public class Person {
         this.weight = weight;
     }
 
-    public static Person build(int height, int weight) {
-        return new Person(height, weight);
-    }
-
     public int getHeight() {
         return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     public int getWeight() {
         return weight;
     }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-
 
     @Override
     public String toString() {

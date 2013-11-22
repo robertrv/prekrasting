@@ -23,7 +23,10 @@ class FizzBuzzSuite extends FunSuite {
   }
 
   test("fizz buzz for 5"){
-    assert(FizzBuzz.fizzbuzz(3) === List("1","2", "Fizz"))
+    assert(FizzBuzz.fizzbuzz(5) === List("1","2", "Fizz", "4", "Buzz"))
+  }
+  test("fizz buzz for 15"){
+    assert(FizzBuzz.fizzbuzz(15) === List("1","2", "Fizz", "4", "Buzz", "Fizz", "7", "8","Fizz", "Buzz", "11","Fizz","13","14", "FizzBuzz"))
   }
 
 }

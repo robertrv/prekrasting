@@ -8,9 +8,11 @@ import com.hello.annotations.BroWay;
 import com.hello.annotations.CalifornicationWay;
 import com.hello.annotations.WorldWay;
 import com.hello.testng.infraestructure.AnnotationQueueListener;
+import com.hello.testng.infraestructure.AnnotationTransformer;
 import org.testng.Assert;
 import org.testng.ITest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.lang.annotation.Annotation;
@@ -19,6 +21,12 @@ import java.util.Queue;
 
 import static org.testng.Assert.assertTrue;
 
+/*
+The @Listeners annotation is just saved as a mark, but it is ignored
+(http://testng.org/doc/documentation-main.html#testng-listeners). This helps us decide whether to apply or not this
+listener.
+ */
+@Listeners({AnnotationTransformer.class})
 public class WorldTest implements ITest, AnnotationQueueListener {
 
     private Greeting greeter;

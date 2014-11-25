@@ -4,6 +4,7 @@ import com.hello.annotations.GreetingAnnotation;
 import org.reflections.Reflections;
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
+import org.testng.annotations.Listeners;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
@@ -21,7 +22,7 @@ public class AnnotationTransformer implements IAnnotationTransformer {
 
     @Override
     public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-        if (testMethod != null) {
+        if (interestingMethod(testMethod)) {
             if (!annotation.getDataProvider().isEmpty() || annotation.getDataProviderClass() != null) {
                 if (filterUsefulAnnotations(testMethod).size() == 1) {
                     // TODO make it work with data provider if there is just one annotation which we are interested in.
@@ -30,6 +31,24 @@ public class AnnotationTransformer implements IAnnotationTransformer {
             }
             annotation.setDataProviderClass(StaticDataProvider.class);
             annotation.setDataProvider(StaticDataProvider.PROVIDER_NAME);
+        }
+    }
+
+    private boolean interestingMethod(Method testMethod) {
+        if (testMethod == null) {
+            return false;
+        } else {
+            if (!testMethod.getDeclaringClass().isAnnotationPresent(Listeners.class)) {
+                return false;
+            } else {
+                Listeners annotation = testMethod.getDeclaringClass().getAnnotation(Listeners.class);
+                for (Class<?> aClass : annotation.value()) {
+                    if (aClass.equals(AnnotationTransformer.class)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
         }
     }
 

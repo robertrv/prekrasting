@@ -15,9 +15,14 @@ import java.lang.annotation.Annotation;
 import java.util.Collection;
 import java.util.Set;
 
-
 public class WorldTestHookable extends HookToChangeCalls implements InitializeBaseOnAnnotationListener {
 
+    private static Set annotations;
+
+    static {
+        Reflections reflections = new Reflections(GreetingAnnotation.class.getPackage().getName());
+        annotations = reflections.getTypesAnnotatedWith(GreetingAnnotation.class);
+    }
     private Greeting greeter;
 
     @WorldWay
@@ -45,12 +50,6 @@ public class WorldTestHookable extends HookToChangeCalls implements InitializeBa
         } else {
             throw new IllegalStateException("Could not initialize this type");
         }
-    }
-
-    private static Set annotations;
-    static {
-        Reflections reflections = new Reflections(GreetingAnnotation.class.getPackage().getName());
-        annotations = reflections.getTypesAnnotatedWith(GreetingAnnotation.class);
     }
 
     @Override

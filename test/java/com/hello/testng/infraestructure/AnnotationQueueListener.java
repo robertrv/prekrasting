@@ -1,6 +1,5 @@
 package com.hello.testng.infraestructure;
 
-
 import java.lang.annotation.Annotation;
 import java.util.Queue;
 

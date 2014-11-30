@@ -7,9 +7,6 @@ import org.testng.ITestContext;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by viquer on 11/20/14.
- */
 public class MyMethodInterceptor implements IMethodInterceptor {
     @Override
     public List<IMethodInstance> intercept(List<IMethodInstance> methods, ITestContext context) {

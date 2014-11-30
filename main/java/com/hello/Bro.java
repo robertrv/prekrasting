@@ -1,8 +1,5 @@
 package com.hello;
 
-/**
- * Created by viquer on 11/18/14.
- */
 public class Bro implements Greeting {
 
 

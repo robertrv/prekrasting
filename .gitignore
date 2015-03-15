@@ -6,3 +6,4 @@ out/
 .idea/
 *.iml
 *.jar
+**/lib_managed/
